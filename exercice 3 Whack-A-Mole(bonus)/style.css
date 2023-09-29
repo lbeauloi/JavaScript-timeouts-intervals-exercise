@@ -1,0 +1,27 @@
+* {
+  background-color: green;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1, h2 {
+  padding: 35px;
+}
+
+.tableau {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 200px;
+}
+.tableau .trou {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(124, 89, 44);
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
