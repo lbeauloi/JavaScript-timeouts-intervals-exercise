@@ -39,7 +39,16 @@ displayKeller();
 // ---EX2---
 // Write a function that displays every second that has passed on the page since it was opened. The display should be refreshed every second. If 60 seconds are elapsed, write "a minute has passed", then "2 minutes have passed" (for 120 seconds and more), etc.
 //---MON APPROCHE---
-// 1. calculer le temps écouler sur la page et le log dans la console. Si +60 alors affiché "une minute est passée"
+// 1. calculer le temps écouler sur la page et le log dans la console.
+// let = startTime = new Date();
+// function tempsEcoule() {
+//   let currentTime = new Date();
+//   elapsedTime = Math.floor((currentTime - startTime) / 1000); //math floor pour arrondir car on est en milli seconde puis on divise par 1000 pour revenir en seconde
+//   console.log(elapsedTime);
+// }
+// setInterval(tempsEcoule, 1000);
+
+// Si +60 alors affiché "une minute est passée"
 // 2. utiliser setInterval pour refresh
 
 const startTime = new Date(); // constante dans laquelle on stock en mémoire la date d'ouverture de la page
@@ -48,7 +57,7 @@ function ElapsedTime() {
   const currentTime = new Date();
   const elapsedSeconds = Math.floor((currentTime - startTime) / 1000); // constante dans laquelle on stock le nombre de seconde passée. Pq ça et pas simplement : (currentTime - startTime) / 1000 ? Car il faut arrondire sinon on a des truc du style 1.002s, 2.0564s, 3,351s etc
 
-  if (elapsedSeconds >= 60) { // Si il y a plus de 60 secondes de passées, alors on veut afficher le nombre de MINUTE passée 
+  if (elapsedSeconds >= 60) { // Si il y a plus de 60 secondes de passées, alors on veut afficher le nombre de MINUTE passée
     const elapsedMinutes = Math.floor(elapsedSeconds / 60); // on divise par 60 pour voir si la minute est atteinte ou pas, c'est le cas quand 60/60=1
     if (elapsedMinutes === 1) {
       console.log("1 minute est passée");
