@@ -1,12 +1,20 @@
 * {
-  background-color: green;
+  background-color: #00561b;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-h1, h2 {
+h1 {
   padding: 35px;
+}
+
+h2 {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 200px;
+  margin: auto;
+  padding: 15px;
 }
 
 .tableau {
@@ -18,10 +26,11 @@ h1, h2 {
   align-items: center;
   margin: auto;
   width: 200px;
+  padding: 30px;
 }
 .tableau .trou {
   height: 150px;
   width: 150px;
-  background-color: rgb(124, 89, 44);
+  background-color: #5a3a22;
   border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
